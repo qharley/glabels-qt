@@ -55,7 +55,7 @@ namespace glbarcode
 	 */
 	bool BarcodeQrcode::encode( const std::string& cookedData, Matrix<bool>& encodedData )
 	{
-		QRcode *qrcode = QRcode_encodeString( cookedData.c_str(), 0, QR_ECLEVEL_M, QR_MODE_8, 1 );
+		QRcode *qrcode = QRcode_encodeString( cookedData.c_str(), 0, QR_ECLEVEL_6, QR_MODE_8, 1 );
 		if ( qrcode == NULL )
 		{
 			return false;
